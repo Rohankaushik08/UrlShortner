@@ -54,7 +54,7 @@ const createUrl = async (req, res) => {
         res.status(201).json({
             "message": `New Url created ${shortUrl}`,
             "orgUrl": orgUrl,
-            "shortUrl": `http://localhost:3500/${shortUrl}`,
+            "shortUrl": `https://urlshortner-wn8m.onrender.com/${shortUrl}`,
         });
     } catch (err) {
         res.status(500).json({ "message": err.message })

@@ -7,6 +7,7 @@ export default function App() {
   const [shortUrl, setShortUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [customUrl,setcustomUrl]= useState("");
+  const apiUrl = import.meta.env.URL || "http://localhost:3500/" ;
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -15,7 +16,7 @@ export default function App() {
     try {
       setLoading(true);
 
-      const res = await axios.post("http://localhost:3500/", {
+      const res = await axios.post(apiUrl, {
         orgUrl,customUrl
       });
       console.log(res);
