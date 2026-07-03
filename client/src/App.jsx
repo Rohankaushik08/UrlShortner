@@ -7,7 +7,7 @@ export default function App() {
   const [shortUrl, setShortUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [customUrl,setcustomUrl]= useState("");
-  const apiUrl = import.meta.env.URL || "http://localhost:3500/" ;
+  const apiUrl = import.meta.env.VITE_API_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
 
